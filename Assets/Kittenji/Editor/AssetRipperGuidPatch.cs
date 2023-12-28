@@ -60,7 +60,7 @@ namespace Kittenji.Tools
                 for (int i = 0; i < monoScripts.Length; i++)
                 {
                     string scriptGuid = monoScripts[i];
-                    EditorUtility.DisplayProgressBar("Indexing MonoScript", scriptGuid, i / monoScripts.Length);
+                    EditorUtility.DisplayProgressBar("Indexing MonoScript", scriptGuid, i / (monoScripts.Length - 1f));
 
                     string assetPath = AssetDatabase.GUIDToAssetPath(scriptGuid);
                     MonoScript monoScript = AssetDatabase.LoadAssetAtPath<MonoScript>(assetPath);
@@ -108,7 +108,7 @@ namespace Kittenji.Tools
                 {
                     string file = files[i];
                     if (!file.EndsWith(".shader")) continue;
-                    EditorUtility.DisplayProgressBar("Indexing Shaders", file, i / files.Length);
+                    EditorUtility.DisplayProgressBar("Indexing Shaders", file, i / (files.Length - 1f));
 
                     string content = File.ReadAllText(file);
                     string meta = File.ReadAllText(file + ".meta");
@@ -174,7 +174,7 @@ namespace Kittenji.Tools
             {
                 string file = files[i];
                 string ext = Path.GetExtension(file).ToLowerInvariant();
-                EditorUtility.DisplayProgressBar("Traversing", dir + '\n' + file, i / files.Length);
+                EditorUtility.DisplayProgressBar("Traversing", dir + '\n' + file, i / (files.Length - 1f));
 
                 switch (ext)
                 {
