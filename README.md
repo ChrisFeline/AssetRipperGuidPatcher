@@ -5,6 +5,11 @@ This tool will try to fix incorrect GUID values in prefabs and scenes. Aditional
 
 I made this tool to make Lethal Company modding easier, as we often use in-game prefabs to get a proper reference of how the game is actually set-up for our mods. But this tool can also be used for other games.
 
+# Why this exists?
+AssetRipper exports prefab instances with randomly generated GUIDs from the decompiled assemblies. This will make almost every prefab have missing script references to necessary packages. (Like animation rigging for example).
+
+So you can use this to understand how something is **actually** setup in game, and create an identical implementation on your mods.
+
 # How To (Guide)
 The use of this script assumes that you have at least some basic understanding of UnityEngine assets, and modding.
 
