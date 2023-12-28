@@ -1,4 +1,4 @@
-# AssetRipper Guid Patcher
+# AssetRipper Guid Patcher (Experimental)
  UnityEditor tool that patches AssetRipper generated guids with the correct ones from the installed packages on your project.
 
 This tool will try to fix incorrect GUID values in prefabs and scenes. Aditionally it will also try to match shader names in materials and assign the correct shaders also.
