@@ -1,7 +1,7 @@
 # AssetRipper Guid Patcher (Experimental)
  UnityEditor tool that patches AssetRipper generated guids with the correct ones from the installed packages on your project.
 
-This tool will try to fix incorrect GUID values in prefabs and scenes. Aditionally it will also try to match shader names in materials and assign the correct shaders also.
+This tool will try to fix incorrect GUID values in prefabs and scenes. Aditionally it will also try to match shader names in materials and assign the correct shaders to those.
 
 I made this tool to make Lethal Company modding easier, as we often use in-game prefabs to get a proper reference of how the game is actually set-up for our mods. But this tool can also be used for other games.
 
@@ -28,4 +28,18 @@ The use of this script assumes that you have at least some basic understanding o
 4. Then go to the top bar and run:
     - `Kittenji` **/** `AssetRipper Guid Patch`
 5. An open folder dialog will open, locate your game's exported directory and select the generated folder called: `ExportedProject`
-6. After the tool is done processing your files, you can now import the prefabs and other assets to your project. Enjoy.
+6. After the tool is done processing your files, copy the following folders into the **Assets** directory located in your project.
+    - AnimationClips
+    - AnimatorController
+    - AudioClip
+    - CubeMap
+    - Material
+    - Mesh
+    - MonoBehaviour
+    - PhysicMaterial
+    - PrefabInstance
+    - RenderTexture
+    - Scenes
+    - Sprite
+    - Texture2D
+    - VideoClip
